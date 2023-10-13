@@ -4,18 +4,7 @@
   const html = '<table><tr><td>TEST</td></tr></table>';
 
   function initEditor(node) {
-    ClassicEditor.create(node, {
-      htmlSupport: {
-        allow: [
-          {
-            name: /.*/,
-            attributes: true,
-            classes: true,
-            styles: true,
-          },
-        ],
-      },
-    }).catch((error) => {
+    ClassicEditor.create(node).catch((error) => {
       console.error(error);
     });
   }
