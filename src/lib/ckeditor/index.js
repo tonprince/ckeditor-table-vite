@@ -38,16 +38,6 @@ import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { ClickObserver } from '@ckeditor/ckeditor5-engine';
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 
-window.getViewportTopOffsetConfig = function () {
-  const documentElement = document.documentElement;
-
-  return parseInt(
-    window
-      .getComputedStyle(documentElement)
-      .getPropertyValue('--ck-snippet-viewport-top-offset')
-  );
-};
-
 class ClassicEditor extends ClassicEditorBase {}
 
 ClassicEditor.builtinPlugins = [
@@ -126,11 +116,6 @@ ClassicEditor.defaultConfig = {
     ],
   },
 
-  ui: {
-    viewportOffset: {
-      top: window.getViewportTopOffsetConfig(),
-    },
-  },
   image: {
     toolbar: [
       'imageTextAlternative',
