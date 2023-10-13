@@ -1,7 +1,7 @@
 <script>
   import { ClassicEditor } from '$lib/ckeditor';
 
-  const html = '<div>TEST</div>';
+  const html = '<table><tr><td>TEST</td></tr></table>';
 
   function initEditor(node) {
     ClassicEditor.create(node, {
